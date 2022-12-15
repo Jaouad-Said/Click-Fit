@@ -30,3 +30,50 @@ const scrollHeader = () => {
 };
 window.addEventListener("scroll", scrollHeader);
 
+const sections = document.querySelectorAll("section[id]");
+
+const scrollActive = () => {
+  const scrollY = window.pageYOffset;
+
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight,
+      sectionTop = current.offsetTop - 58,
+      sectionId = current.getAttribute("id"),
+      sectionsClass = document.querySelector(
+        ".nav__menu a[href*=" + sectionId + "]"
+      );
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      sectionsClass.classList.add("active-link");
+    } else {
+      sectionsClass.classList.remove("active-link");
+    }
+  });
+};
+window.addEventListener("scroll", scrollActive);
+
+const scrollUp = () => {
+  const scrollUp = document.getElementById("scroll-up");
+  this.scrollY >= 350
+    ? scrollUp.classList.add("show-scroll")
+    : scrollUp.classList.remove("show-scroll");
+};
+window.addEventListener("scroll", scrollUp);
+
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 2200,
+  delay: 400,
+});
+
+sr.reveal(`.home__data .footer__container, .`);
+sr.reveal(`.home__img`, { delay: 700, origin: "bottom" });
+sr.reveal(`.Logos__img, .program__card, .pricing__card`, { interval: 100 });
+sr.reveal(`.choose__img`, { origin: "left" });
+sr.reveal(`.choose__content`, { origin: "right" });
+
+(async () => {
+  const response = await fetch("http://numbersapi.com/1/30/date?json");
+  const body = await response.text();
+})();
