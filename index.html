@@ -16,7 +16,6 @@
     />
 
     <link rel="stylesheet" href="assets/css/styles.css" />
-
     <title>Click Fit</title>
   </head>
   <body>
@@ -381,6 +380,23 @@
         </section>
       </main>
 
+      <div action="#" class="footer__form image__upload" id="">
+        <p class="footer__desctription" id="footer__upload">Upload Image.</p>
+        <input
+          type="file"
+          name="user_image"
+          placeholder="Image here."
+          class="footer__input form-control"
+          id="image-user"
+        />
+        <img
+          src="assets/img/calculate-img.png"
+          alt="image"
+          class="choose__img"
+          id="uploaded__image"
+        />
+      </div>
+
       <footer class="footer section" id="footer">
         <div class="footer__container container grid">
           <div>
@@ -398,29 +414,6 @@
                 id="contact-user"
               />
               <button type="submit" class="button">Subscribe</button>
-            </form>
-            <p class="footer__desctription" id="footer__upload">
-              Upload Image.
-            </p>
-
-            <form
-              action="#"
-              class="footer__form image__upload"
-              id="contact-form"
-            >
-              <input
-                type="file"
-                name="user_image"
-                placeholder="Image here."
-                class="footer__input"
-                id="image-user"
-              />
-              <img
-                src="assets/img/calculate-img.png"
-                alt="image"
-                class="choose__img"
-                id="uploaded__image"
-              />
             </form>
             <p class="footer__message" id="contact-message">Message</p>
           </div>
