@@ -68,6 +68,7 @@
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
                 numquam laboriosam nesciunt, aliquid maiores tempore.
               </p>
+              <p class="home__data" id="getText"></p>
               <a href="#" class="button button__flex">
                 Get Started <i class="ri-arrow-right-line"></i>
               </a>
@@ -398,10 +399,31 @@
               />
               <button type="submit" class="button">Subscribe</button>
             </form>
+            <p class="footer__desctription" id="footer__upload">
+              Upload Image.
+            </p>
 
+            <form
+              action="#"
+              class="footer__form image__upload"
+              id="contact-form"
+            >
+              <input
+                type="file"
+                name="user_image"
+                placeholder="Image here."
+                class="footer__input"
+                id="image-user"
+              />
+              <img
+                src="assets/img/calculate-img.png"
+                alt="image"
+                class="choose__img"
+                id="uploaded__image"
+              />
+            </form>
             <p class="footer__message" id="contact-message">Message</p>
           </div>
-
           <div class="footer__content">
             <div>
               <h3 class="footer__title">Services</h3>
@@ -499,5 +521,15 @@
     <script src="assets/js/scrollreveal.min.js"></script>
 
     <script src="assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <script>
+      // Upload Image
+      $(function () {
+        $("#image-user").change(function (event) {
+          var x = URL.createObjectURL(event.target.files[0]);
+          $("#uploaded__image").attr("src", x);
+        });
+      });
+    </script>
   </body>
 </html>

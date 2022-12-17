@@ -288,6 +288,14 @@ img {
   margin-bottom: 2.5rem;
 }
 
+#footer__upload {
+  margin-top: 1.5rem;
+}
+
+.home__data {
+  margin-bottom: 2.5rem;
+}
+
 .home__triangle {
   height: 325px;
   position: absolute;
@@ -1044,4 +1052,19 @@ img {
     padding: 2rem 3.5rem;
     row-gap: 2.5rem;
   }
+}
+
+.image__upload input[type="file"] {
+  /* display: none; */
+}
+
+.upload-image {
+  height: 50%;
+}
+
+input::file-selector-button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--first-color);
+  border: none;
 }

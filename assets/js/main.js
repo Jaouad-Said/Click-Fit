@@ -73,7 +73,21 @@ sr.reveal(`.Logos__img, .program__card, .pricing__card`, { interval: 100 });
 sr.reveal(`.choose__img`, { origin: "left" });
 sr.reveal(`.choose__content`, { origin: "right" });
 
-(async () => {
-  const response = await fetch("http://numbersapi.com/1/30/date?json");
-  const body = await response.text();
-})();
+//API
+const api_url = "http://numbersapi.com/1/30/date?json";
+
+async function getapi(url) {
+  const response = await fetch(url);
+  var data = await response.json();
+  console.log(data);
+  show(data);
+}
+getapi(api_url);
+
+function show(data) {
+  let tab = `<p>${data.text}</p>`;
+
+  document.getElementById("getText").innerHTML = tab;
+}
+
+
