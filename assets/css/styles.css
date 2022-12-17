@@ -1067,4 +1067,10 @@ input::file-selector-button {
   font-size: var(--normal-font-size);
   background-color: var(--first-color);
   border: none;
+  width: 60%;
+  height: 90%;
+}
+
+input::file-name {
+  display: none;
 }
